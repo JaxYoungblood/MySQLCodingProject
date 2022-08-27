@@ -16,7 +16,7 @@ public class DbConnection {
 	private static final int PORT = 3306;
 
 		
-	public static Connection getConnection() {
+	public static Connection getConnection() { //just wanted to make the print out a little 'cleaner'
 		String uri = String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s&useSSL=false", HOST, PORT, SCHEMA, USER, PASSWORD);
 		System.out.println(" ");
 		System.out.println("============================================================================================================");

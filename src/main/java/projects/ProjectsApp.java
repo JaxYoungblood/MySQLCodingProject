@@ -71,14 +71,14 @@ public class ProjectsApp {
 		
 		Project dbProject = projectService.addProject(project);
 		System.out.println(" ");
-		System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
+		System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~"); //fun stuff
 		System.out.println("You have successfully created project: " + dbProject);
 
 	}//end METHOD createProject
 
 
 	private boolean exitMenu() {
-		System.out.println(",_,_,_,_,_,_,_,_,_,_,");
+		System.out.println(",_,_,_,_,_,_,_,_,_,_,"); //just for fun to make things 'cleaner'
 		System.out.println("| Exiting the menu! |");
 		System.out.println("'-'-'-'-'-'-'-'-'-'-'");
 		return true;
