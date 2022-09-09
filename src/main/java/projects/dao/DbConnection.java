@@ -19,19 +19,21 @@ public class DbConnection {
 	public static Connection getConnection() { 
 		String uri = String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s&useSSL=false", HOST, PORT, SCHEMA, USER, PASSWORD);
 		System.out.println(" ");  //just wanted to make the print out a little 'cleaner'
-		System.out.println("============================================================================================================");
-		System.out.println("|| Connecting with url: " + uri + " ||");
+		System.out.println("===========================================");
+		//System.out.println("|| Connecting with url: " + uri + " ||");
 			
 		try {
 			Connection conn = DriverManager.getConnection(uri);		//asked the driver to look up the connection for us
-			System.out.println("|| Successfully obtained connection!                                                                      ||");//and asked driver to make the connection
-			System.out.println("============================================================================================================");
+			System.out.println("||   Successfully obtained connection!   ||");//and asked driver to make the connection
+			System.out.println("===========================================");
 
 			return conn;
-		} catch (SQLException e) {
-			System.out.println("|| ERROR getting connection                                                                                ||");
-			System.out.println("============================================================================================================");
+		}//end TRY
+		
+		catch (SQLException e) {
+			System.out.println("||       ERROR getting connection        ||");
+			System.out.println("===========================================");
 			throw new DbException(e);
-		}
-	}
-}
+		}//end CATCH
+	}//end METHOD getConnection
+}//end CLASS
